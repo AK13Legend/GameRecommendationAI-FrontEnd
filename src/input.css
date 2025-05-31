@@ -1,1 +1,10 @@
+@font-face {
+    font-family: PixelifySans;
+    src: url("../src/assets/fonts/PixelifySans-Regular.ttf");
+}
+
 @import "tailwindcss";
+
+@theme{
+    --font-PixelifySans: PixelifySans, "sans-serif";
+}
