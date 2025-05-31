@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            pixel: ['"Pixelify Sans"', 'sans-serif'], // Custom font family name
+          },
+          fontWeight: {
+            pixel: '400', // Default weight for the pixel font
+          }
+        }
+      }
+    }
+  </script>
+  <title>Plai.io</title>
+</head>
+<body class="relative h-screen overflow-hidden bg-slate-950">
+
+  <!-- Background Effect -->
+  <div class="relative h-screen">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
+  </div>
+
+  <!-- Content -->
+  <header class=>
+    <nav class="p-8 pt-8">
+      <a class="text-5xl text-zinc-100 font-pixel">Plai.io</a>
+    </nav>
+  </header>
+
+</body>
+</html>
+
