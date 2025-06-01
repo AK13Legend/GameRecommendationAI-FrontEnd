@@ -4,32 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="output.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
   <title>Plai.io</title>
 </head>
-<body class="relative h-screen overflow-hidden bg-slate-950">
+<body class="overflow-hidden bg-slate-950">
 
-  <!-- Background Effect -->
-  <div class="relative h-screen">
+ 
   <!-- Background Pattern -->
   <div class="absolute inset-0">
-    <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
+    <div class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
   </div>
 
   <!-- Content -->
-  <header class=>
+  <header class="absolute">
     <nav class="p-10 pt-10">
       <a class="text-5xl text-zinc-100 font-PixelifySans">Plai.io</a>
     </nav>
   </header>
 
-  <div>
+<div class="flex h-screen justify-center items-center">
+  <!-- Main container with gradient background -->
+ <div class="flex min-h-screen items-center justify-center p-4">
+  <div class="relative flex items-center transform translate-y-20" style="width: clamp(300px, 80vw, 384px)" > <!-- Responsive width constraint -->
+    <!-- Gradient background -->
+    <div class="absolute inset-0 bg-[radial-gradient(#221F33_10px,#24243A_1px)] rounded-lg transform "></div>
+    
+    <!-- Textarea with controlled width -->
+    <textarea
+      id="autoGrowTextarea"
+      class="relative w-full bg-transparent p-4 text-white font-PixelifySans placeholder-gray-400 resize-none overflow-hidden focus:outline-none "
+      placeholder="Type here..."
+      rows="1"
+      oninput="this.style.height = 'auto'; this.style.height = (this.scrollHeight) + 'px'"
+    required></textarea>
 
+    <!-- Button -->
+    <button id="submitButton" class="relative cursor-pointer w-10 h-10 rounded-full 
+              bg-[radial-gradient(#221F33_10px,#24243A_1px)] 
+              flex items-center justify-center ml-2 mr-1 
+              hover:bg-[radial-gradient(#2a2546_10px,#2d2a4a_1px)] 
+              transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" 
+           stroke="currentColor" stroke-width="2" class="text-white transform rotate-180">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19 12 12 19 5 12"></polyline>
+      </svg>
+    </button>
   </div>
 
+</div>
+</div>
 </body>
 </html>
 
