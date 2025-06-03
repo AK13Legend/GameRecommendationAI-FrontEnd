@@ -7,46 +7,60 @@
 
   <title>Plai.io</title>
 </head>
-<body class="overflow-hidden bg-slate-950">
+<body>
  
   <!-- Background Pattern -->
-  <div class="absolute inset-0">
     <div class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
-  </div>
   <!-- Content -->
   <header class="absolute">
     <nav class="p-10 pt-10">
       <a class="text-5xl text-zinc-100 font-PixelifySans">Plai.io</a>
     </nav>
   </header>
+  <!-- Game card -->
 
-<div class="flex h-screen justify-center items-center">
+
+
+
   <!-- Main container with gradient background -->
- <div class="flex min-h-screen items-center justify-center p-4">
-  <div class="relative flex  items-center transform translate-y-20" style="width: clamp(300px, 80vw, 384px)" > <!-- Responsive width constraint -->
-    <div class="relative p-3 w-full h-20 rounded-lg"> 
-  <!-- Gradient background (covers entire parent) -->
-  <div class="absolute inset-0 bg-[radial-gradient(#221F33_10px,#24243A_1px)] rounded-lg -z-10">
-  </div>
-     <div class="flex items-center "> 
-    <textarea
-      id="autoGrowTextarea"
-      class="relative flex-1 p-4 text-white font-PixelifySans placeholder-gray-400 resize-none overflow-hidden focus:outline-none"
-      placeholder="Type here..."
-      rows="1"
-      oninput="this.style.height = 'auto'; this.style.height = (this.scrollHeight) + 'px'"
-    required></textarea>
-    <!-- Button -->
-     <button type="submit" class="relative flex  bg-indigo-500 hover:bg-indigo-600 w-10 h-10 rounded-full cursor-pointer  space-x-3 items-center justify-center ">
-      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 fill-current text-zinc-100">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-      </svg>
-    </button>
-  </div>
-  </div>
+  <div class="relative min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="relative transform" style="width: clamp(300px, 80vw, 470px)" >
+       <!-- Responsive width constraint -->
+        <div class="w-full mb-4 p-4 bg-[radial-gradient(#221F33_1px,#24243A_1px)] rounded-lg" style="width: clamp(276px, 80vw, 470px)">
 
+              <img src="https://media.rawg.io/media/games/da1/da1b267764d77221f07a4386b6548e5a.jpg" class="rounded-2xl" alt=""><br>
+              <h3 class="text-cyan-50">Name: Dark Souls III</h3><br>
+              <h1 class="text-cyan-50">Description: A dark fantasy action RPG that challenges players with its difficult combat and intricate world design. It's known for its deep lore and rewarding gameplay.</h1> <br>
+             <p class="text-cyan-50">Genre: Souls Like</p><br>
+             <p class="text-cyan-50">Year: 2015</p>
+          </div>
+      <div class="relative  w-full  rounded-lg"> 
+  <!-- Gradient background (covers entire parent) -->
+
+        <div class="flex items-center "> 
+          <textarea
+          id="autoGrowTextarea"
+          class="relative flex-1 p-4 text-white font-PixelifySans placeholder-gray-400 resize-none overflow-hidden focus:outline-none bg-[radial-gradient(#221F33_1px,#24243A_1px)] rounded-lg"
+          placeholder="Type here..."
+          rows="1"
+          oninput="this.style.height = 'auto'; this.style.height = (this.scrollHeight) + 'px'"
+          required></textarea>
+
+    <!-- Button -->
+          <button type="submit" class="relative flex  hover:bg-blue-700 duration-100 ease-in-out w-10 h-14 rounded-2xl cursor-pointer items-center justify-center left-1 ">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8 fill-current text-zinc-100">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+          
+    </div>
+  </div>
 </div>
-</div>
+
+
+
 </body>
 </html>
 
