@@ -4,90 +4,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="output.css">
-
-  <title>Plai.io</title>
+  <title>Plai.io - Game Recommendations</title>
 </head>
 <body>
- 
   <!-- Background Pattern -->
-    <div class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
+  <div class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
+  
   <!-- Content -->
   <header class="absolute">
     <nav class="p-10 pt-10">
-      <a class="text-5xl text-zinc-100 font-PixelifySans">Plai.io</a>
+      <a class="text-5xl text-zinc-50 font-PixelifySans">Plai.io</a>
+       <span class="tagline text-zinc-50 font-PixelifySans">- a game recommendation system powered by AI</span>
     </nav>
   </header>
+<div class="w-full gap-1 text-center ">
+  <div class="flex flex-col sm:flex-row justify-center items-center  px-4">
+    <span class="text-cyan-100 font-mono text-sm whitespace-nowrap">
+      Contact for feedback/Ideas:
+    </span>
+    <div class="contact-links flex gap-4 flex-wrap justify-center">
+      <a href="mailto:your@email.com" 
+         class="text-cyan-400 hover:underline font-medium flex items-center gap-1 text-sm sm:text-base">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Email
+      </a>
+      <a href="https://t.me/ak13b" 
+         target="_blank" 
+         class="text-cyan-400 hover:underline font-medium flex items-center gap-1 text-sm sm:text-base">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+        </svg>
+        Telegram
+      </a>
+    </div>
+  </div>
+</div>
 
-
-
-
-
-  <!-- Main container with gradient background -->
+  <!-- Main container -->
   <div class="relative min-h-screen flex flex-col items-center justify-center p-4">
-    
-    <div class="relative transform" style="width: clamp(300px, 80vw, 470px); margin-right: 20px;" >
-      
-       <!-- Responsive width constraint -->
-
-       <!-- Game card -->
+    <div class="relative transform" style="width: clamp(300px, 80vw, 470px); margin-right: 20px;">
+      <!-- Carousel Container -->
       <div class="relative mb-4 flex items-center">
-        <div class="flex overflow-x-auto snap-x snap-mandatory gap-0.5 pb-4 scrollbar-hide rounded-2xl" style="scrollbar-width: none; ">
-          <div class="flex-shrink-0 w-full snap-start p-4 bg-[radial-gradient(#221F33_1px,#24243A_1px)] rounded-lg" style="width: clamp(276px, 80vw, 470px)">
-              <img src="https://media.rawg.io/media/games/da1/da1b267764d77221f07a4386b6548e5a.jpg" class="rounded-2xl" alt=""><br>
-              <h3 class="text-cyan-50">Name: Dark Souls III</h3><br>
-              <h1 class="text-cyan-50">Description: A dark fantasy action RPG that challenges players with its difficult combat and intricate world design. It's known for its deep lore and rewarding gameplay.</h1> <br>
-             <p class="text-cyan-50">Genre: Souls Like</p><br>
-             <p class="text-cyan-50">Year: 2015</p>
+         <div id="loader" class="hidden absolute inset-0 transform -translate-y-20 flex items-center justify-center z-20">
+            <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
           </div>
-          <div class="flex-shrink-0 w-full snap-start p-4 bg-[radial-gradient(#221F33_1px,#24243A_1px)] rounded-lg" style="width: clamp(276px, 80vw, 470px)">
-              <img src="https://media.rawg.io/media/games/737/737ea5662211d2e0bbd6f5989189e4f1.jpg" class="rounded-2xl" alt=""><br>
-              <h3 class="text-cyan-50">Name: Dark Souls III</h3><br>
-              <h1 class="text-cyan-50">Description: A dark fantasy action RPG that challenges players with its difficult combat and intricate world design. It's known for its deep lore and rewarding gameplay.</h1> <br>
-             <p class="text-cyan-50">Genre: Souls Like</p><br>
-             <p class="text-cyan-50">Year: 2015</p>
-          </div>
-          
+        <!-- Cards Container -->
+        <div id="carousel-container" class="flex overflow-x-auto snap-x snap-mandatory gap-0.5 pb-4 scrollbar-hide rounded-2xl" style="scrollbar-width: none;">
+          <!-- Add this inside your carousel container div -->
+         
           
         </div>
-         
-      <!-- Right Arrow (sibling of cards container) -->
-      
-        
       </div>
-      <button class="absolute top-1/2 right-[-40px] translate-y-[-50%] text-white rounded-full w-9 h-10 flex items-center justify-center hover:bg-blue-700 duration-100 ease-in-out z-10">
+      
+      <!-- Right Arrow -->
+      <button id="right-arrow" class="absolute top-1/2 right-[-40px] translate-y-[-50%] text-white rounded-full w-9 h-10 flex items-center justify-center hover:bg-blue-700 duration-100 ease-in-out z-10 hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8 fill-current text-zinc-100 transform rotate-90">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
         </svg>
       </button>
 
-      <div class="relative  w-full  rounded-lg"> 
-        
-  <!-- Gradient background (covers entire parent) -->
-
-        <div class="flex items-center "> 
+      <!-- Input Section -->
+      <div class="relative w-full rounded-lg"> 
+        <div class="flex items-center"> 
           <textarea
-          id="autoGrowTextarea"
-          class="relative flex-1 p-4 text-white font-PixelifySans placeholder-gray-400 resize-none overflow-hidden focus:outline-none bg-[radial-gradient(#221F33_1px,#24243A_1px)] rounded-lg"
-          placeholder="Type here..."
-          rows="1"
-          oninput="this.style.height = 'auto'; this.style.height = (this.scrollHeight) + 'px'"
-          required></textarea>
-
-    <!-- Button -->
-          <button type="submit" class="relative flex  hover:bg-blue-700 duration-100 ease-in-out w-10 h-14 rounded-2xl cursor-pointer items-center justify-center left-1 ">
-            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8 fill-current text-zinc-100">
+            id="autoGrowTextarea"
+            class="relative flex-1 p-4 text-white font-PixelifySans placeholder-gray-400 resize-none overflow-hidden focus:outline-none bg-[radial-gradient(#221F33_1px,#24243A_1px)] rounded-lg"
+            placeholder="Type here..."
+            rows="1"
+            oninput="this.style.height = 'auto'; this.style.height = (this.scrollHeight) + 'px'"
+            required></textarea>
+          <button id="submit-btn" type="button" class="relative flex hover:bg-blue-700 duration-100 ease-in-out w-10 h-14 rounded-2xl cursor-pointer items-center justify-center left-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8 fill-current text-zinc-100">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
             </svg>
           </button>
         </div>
       </div>
-          
     </div>
   </div>
-</div>
 
-
-
+  <!-- Card Template -->
+  <template id="card-template">
+    <div class="flex-shrink-0 w-full snap-start p-4 bg-[radial-gradient(#221F33_1px,#24243A_1px)] rounded-lg" style="width: clamp(276px, 80vw, 470px)">
+      <img class="rounded-2xl" alt="Game image"><br>
+      <h1 class="text-cyan-50 font-mono">Name: <span class="game-name"></span></h1><br>
+      <h1 class="text-cyan-50 font-mono">Year: <span class="game-year"></span></h1><br>
+      <h1 class="text-cyan-50 font-mono">Genre: <span class="game-genre"></span></h1><br>
+      <h1 class="text-cyan-50 font-mono">Description: <span class="game-desc"></span></h1>
+    </div>
+  </template>
+  <div class="attribution">
+      <p class="text-zinc-50 font-PixelifySans">Game data and images provided by <a href="https://rawg.io" target="_blank" class="text-cyan-500 hover:underline">RAWG</a></p>   
+    </div>
+  <script src="../src/js/main.js"></script>
 </body>
-</html>
 
+</html>
