@@ -7,7 +7,7 @@
 # Ignore all appsettings config files
 
 node_modules/
-output.css
+
 
 # User-specific files
 *.suo
