@@ -3,10 +3,11 @@
 
 
 
-appsettings.json
-# Ignore all appsettings config files
-appsettings*.json
 
+# Ignore all appsettings config files
+
+node_modules/
+output.css
 
 # User-specific files
 *.suo
