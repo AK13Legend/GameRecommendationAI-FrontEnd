@@ -6,8 +6,6 @@
 
 # Ignore all appsettings config files
 
-node_modules/
-
 
 # User-specific files
 *.suo
