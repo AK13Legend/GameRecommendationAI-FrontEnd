@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const controller = new AbortController();
       currentRequest = controller;
       
-      const response = await fetch('http://bestgameai.runasp.net/api/GameRecommendation/recommend', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
